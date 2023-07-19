@@ -1,4 +1,4 @@
-package com.LiLYxa.http;
+package com.LiLYxa.http.client;
 
 import java.io.*;
 import java.net.Socket;
@@ -29,6 +29,7 @@ public class HttpClient {
             while ((c = response.read()) != -1) {
                 System.out.print((char) c);
             }
+
 
         } catch (IOException e) {
             throw new RuntimeException(e);
