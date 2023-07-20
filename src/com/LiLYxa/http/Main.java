@@ -1,12 +1,13 @@
 package com.LiLYxa.http;
 
-import com.LiLYxa.http.client.HttpClient;
 import com.LiLYxa.http.server.Server;
 
 public class Main {
     public static void main(String[] args) {
 
-        new Server().bootstrap();
+        new Server((request, response) -> {
+            return "<html><body><h1>Hello, that's a simple server example!</h1></body></html>";
+        }).bootstrap();
 
 //        Thread serverThread = new Thread(() -> new Server().bootstrap());
 //        serverThread.start();
